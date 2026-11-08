@@ -1,37 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f8eee6">
-<title>You're Invited | Abdulrahman & Nadine</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
-*{box-sizing:border-box} body{margin:0;min-height:100svh;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at 15% 15%,#fff9f4,#f1dfd3 60%,#e8cdbd);color:#674638;font-family:'Cormorant Garamond',serif}
-.cover{width:min(100%,520px);min-height:690px;border:1px solid #c79b65;border-radius:260px 260px 24px 24px;background:linear-gradient(145deg,#fffaf5,#f8e9de);box-shadow:0 20px 60px #76503b30;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:45px 28px 36px}
-.cover:before,.cover:after{content:"❀";position:absolute;color:#c89b70;font-size:58px;opacity:.65}.cover:before{top:20px;left:25px}.cover:after{right:25px;bottom:20px}
-.eyebrow{letter-spacing:5px;text-transform:uppercase;font-size:13px;margin:28px 0 18px;color:#9b755c}
-h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(48px,12vw,72px);line-height:1.08;margin:0;color:#7d5140}
-.amp{font-size:28px;color:#bd9569;margin:5px}
-.rule{width:130px;height:1px;background:#c9a274;margin:24px auto}
-.invite-title{font-size:23px;letter-spacing:2px;text-transform:uppercase;margin:0;color:#805e4d}
-.sub{font-size:19px;margin:14px 0 30px;color:#9b7967}
-.open{border:0;border-radius:40px;padding:15px 38px;background:#855a47;color:#fffaf5;font:600 17px 'Cormorant Garamond',serif;letter-spacing:1.5px;box-shadow:0 8px 20px #855a4740;cursor:pointer;transition:.2s}
-.open:hover{transform:translateY(-2px);background:#704632}
-.small{font-size:13px;letter-spacing:2px;color:#a48672;margin-top:auto}
-.ornament{font-size:32px;color:#c39a6c;margin:12px 0}
-</style>
-</head>
-<body>
-<main class="cover">
-  <div class="eyebrow">Together with our families</div>
-  <div class="ornament">❦</div>
-  <h1>Abdulrahman</h1><div class="amp">&amp;</div><h1>Nadine</h1>
-  <div class="rule"></div>
-  <p class="invite-title">Wedding Invitation</p>
-  <p class="sub">We joyfully invite you to celebrate<br>the beginning of our forever.</p>
-  <a href="invitation.html" style="text-decoration:none"><button class="open" type="button">OPEN INVITATION&nbsp; ♥</button></a>
-  <div class="small">3 JANUARY 2027 · CAIRO</div>
-</main>
-</body>
-</html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulrahman & Nadine's Wedding Invitation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --accent-gold: #e6c875;
+            --dark-gold: #9a7635;
+            --bg-cream: #faf7f2;
+            --text-main: #2c2c2c;
+            --text-muted: #666666;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Container Frame */
+        .mobile-container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--bg-cream);
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* Splash Screen overlay */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2417 100%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-gold);
+            text-align: center;
+            padding: 20px;
+            transition: opacity 0.8s ease, visibility 0.8s;
+        }
+
+        .splash-content {
+            border: 1px solid var(--primary-gold);
+            padding: 40px 25px;
+            border-radius: 15px;
+            background: rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 90%;
+        }
+
+        .splash-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.2rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .splash-subtitle {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .btn-open {
+            background: linear-gradient(45deg, var(--dark-gold), var(--accent-gold));
+            color: #000;
+            border: none;
+            padding: 14px 35px;
+            font-size: 1rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(230, 200, 117, 0.4);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-open:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(230, 200, 117, 0.6);
+        }
+
+        /* Main Invitation */
+        .invitation-wrapper {
+            padding: 30px 20px 50px 20px;
+            text-align: center;
+            background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        .header-names {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.5rem;
+            color: var(--dark-gold);
+            margin-top: 15px;
+            line-height: 1.1;
+        }
+
+        .sub-header {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        /* Couple Image Card */
+        .image-card {
+            position: relative;
+            margin: 20px auto 35px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid var(--primary-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            max-width: 100%;
+        }
+
+        .couple-img {
+            width: 100%;
+            display: block
