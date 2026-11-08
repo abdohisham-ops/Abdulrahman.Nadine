@@ -193,6 +193,7 @@
             font-size: 0.95rem;
             color: var(--text-main);
             margin-top: 4px;
+            line-height: 1.5;
         }
 
         /* Countdown */
@@ -269,10 +270,27 @@
             border: none;
         }
 
+        .wishes-container {
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px dashed var(--primary-gold);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 35px;
+        }
+
+        .wishes-note {
+            font-size: 0.85rem;
+            color: var(--dark-gold);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .btn-wishes {
             background: linear-gradient(45deg, #2c2c2c, #4a4a4a);
             color: var(--accent-gold);
             border: 1px solid var(--primary-gold);
+            width: 100%;
         }
 
         .action-btn:hover {
@@ -303,7 +321,7 @@
             font-family: 'Alex Brush', cursive;
             font-size: 1.8rem;
             color: var(--dark-gold);
-            margin-top: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -341,13 +359,13 @@
                 <div class="detail-item">
                     <div class="detail-icon"><i class="fa-regular fa-clock"></i></div>
                     <div class="detail-title">Time</div>
-                    <div class="detail-text">2:30 PM - 6:00 PM</div>
+                    <div class="detail-text">2:30 PM</div>
                 </div>
                 <hr style="border: 0; border-top: 1px dashed rgba(197, 160, 89, 0.3); margin: 15px 0;">
                 <div class="detail-item">
                     <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="detail-title">Gardenia Wedding Halls</div>
-                    <div class="detail-text">La Violla Hall - Almaza, Cairo</div>
+                    <div class="detail-title">Location</div>
+                    <div class="detail-text">Gardenia wedding halls<br>(La Violla)<br>Almaza</div>
                 </div>
             </div>
 
@@ -374,14 +392,18 @@
 
             <!-- Buttons -->
             <div class="actions-group">
-                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Abdulrahman+%26+Nadine+Wedding&dates=20270103T123000Z/20270103T160000Z&details=Joining+Abdulrahman+and+Nadine+on+their+special+day!&location=Gardenia+Wedding+Halls,+La+Violla,+Almaza" target="_blank" class="action-btn btn-calendar">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Abdulrahman+%26+Nadine+Wedding&dates=20270103T123000Z/20270103T160000Z&details=Joining+Abdulrahman+and+Nadine+on+their+special+day!&location=Gardenia+wedding+halls,+La+Violla,+Almaza" target="_blank" class="action-btn btn-calendar">
                     <i class="fa-solid fa-calendar-plus"></i> Add to Calendar
                 </a>
                 
                 <a href="https://goo.gl/maps/8zBXFFiAnKBXH2359" target="_blank" class="action-btn btn-map">
                     <i class="fa-solid fa-map-location-dot"></i> Location Map
                 </a>
+            </div>
 
+            <!-- Wishes Section with note -->
+            <div class="wishes-container">
+                <div class="wishes-note">💌 Please don't forget to write your name!</div>
                 <a href="https://ss0779268.sarahah.pro" target="_blank" class="action-btn btn-wishes">
                     <i class="fa-solid fa-wand-magic-sparkles"></i> Leave a Wish for Couple
                 </a>
